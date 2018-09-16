@@ -3,6 +3,8 @@
 #include <Arduino.h>
 
 int avgVal;
+int adjSetting = 50;
+float temperatureState = 0, privacyState = 0;
 
 void mainsetup(){
   readSetup();
@@ -11,6 +13,7 @@ void mainsetup(){
 
 
 void setup(){
+  interruptSetup();
   Serial.begin(9600);
 chBegin(mainsetup);
 

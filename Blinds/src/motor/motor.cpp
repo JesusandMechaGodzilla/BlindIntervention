@@ -27,7 +27,7 @@ while(true){
       }
     else{
       servoPosition -= increment;
-      if(servoPosiiton>180)
+      if(servoPosition>180)
         servoPosition = 180;
       }
   }
