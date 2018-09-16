@@ -12,7 +12,7 @@ int servoPosition = 90;
 
 while(true){
   Serial.println("Current Servo Position: ");
-  Serial.println(servoPosition);
+  Serial.print(servoPosition);
   time += MS2ST(2000);
   //avgVal is the indoor
   //adjSetting is the effective user setting
