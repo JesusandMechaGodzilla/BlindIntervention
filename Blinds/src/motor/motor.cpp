@@ -12,21 +12,27 @@ int servoPosition = 90;
 
 while(true){
 Serial.println(servoPosition);
-time += MS2ST(1000);
+time += MS2ST(2000);
 //code here
 //avgVal is the indoor
 //adjSetting is the effective user setting
 if(timeDay){
 int increment = (adjSetting - avgVal)/10;
-if(servoPosition<90)
+if(increment>4)
+  increment = 4;
+if(servoPosition<90 && servoPosition >= 0){
   servoPosition += increment;
-else
+  if(servoPosition <0)
+    servoPosition = 0;
+else{
   servoPosition -= increment;
+  if(servoPosiiton>180)
+    servoPosition = 180;
 }
 else
   servoPosition = 0;
 
-myservo.write(servoPosition); 
+myservo.write(servoPosition);
 
 
  chThdSleepUntil(time);
