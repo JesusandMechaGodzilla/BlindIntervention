@@ -23,7 +23,8 @@ while(true){
   }
   avgArray[59] = reading;
   avgVal += reading;
-  avgVal = avgVal/60;
+  avgVal = avgVal/120;
+  if (avgVal > 100) avgVal = 100;
   Serial.println("average");
     Serial.println(avgVal);
 //code here
