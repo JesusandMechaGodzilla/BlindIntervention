@@ -20,19 +20,21 @@ while(true){
     int increment = (adjSetting - avgVal)/10;
     if(increment>4)
       increment = 4;
-    if(servoPosition<90 && servoPosition >= 0){
+    /*if(servoPosition<90 && servoPosition >= 0){
       servoPosition += increment;
       if(servoPosition <0)
         servoPosition = 0;
       }
-    else{
+    else{*/
       servoPosition -= increment;
-      if(servoPosiiton>180)
+      if(servoPosition>180)
         servoPosition = 180;
-      }
+      else if (servoPosition < 90)
+        servoPosition=90;
+      //}
   }
   else
-    servoPosition = 0;
+    servoPosition = 180;
 
   myServo.write(servoPosition);
 
