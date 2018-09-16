@@ -3,8 +3,10 @@
 #include <Arduino.h>
 
 int avgVal;
+int avgVal, adjSetting;
 
 void mainsetup(){
+  adjSetting = 50;
   readSetup();
   motorSetup();
 }
