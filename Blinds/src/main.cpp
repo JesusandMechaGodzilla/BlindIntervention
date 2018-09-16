@@ -3,6 +3,9 @@
 #include <Arduino.h>
 
 int avgVal, adjSetting;
+int avgVal;
+int adjSetting = 50;
+float temperatureState = 0, privacyState = 0;
 
 void mainsetup(){
   adjSetting = 50;

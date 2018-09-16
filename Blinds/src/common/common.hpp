@@ -6,7 +6,7 @@ static int day = 150, normalTemp = 70;
 static int avgArray[60];
 static bool timeDay = true;
 
-//static float temperatureState = 0, privacyState = 0;
+extern float temperatureState,privacyState;
 
 #include "Arduino.h"
 #include "ChRt.h"
