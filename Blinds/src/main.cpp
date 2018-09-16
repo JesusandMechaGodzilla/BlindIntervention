@@ -2,7 +2,6 @@
 #include "ChRt.h"
 #include <Arduino.h>
 
-int avgVal;
 int avgVal, adjSetting;
 
 void mainsetup(){
