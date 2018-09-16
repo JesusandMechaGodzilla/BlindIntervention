@@ -17,17 +17,19 @@ time += MS2ST(2000);
 //avgVal is the indoor
 //adjSetting is the effective user setting
 if(timeDay){
-int increment = (adjSetting - avgVal)/10;
-if(increment>4)
-  increment = 4;
-if(servoPosition<90 && servoPosition >= 0){
-  servoPosition += increment;
-  if(servoPosition <0)
-    servoPosition = 0;
-else{
-  servoPosition -= increment;
-  if(servoPosiiton>180)
-    servoPosition = 180;
+  int increment = (adjSetting - avgVal)/10;
+  if(increment>4)
+    increment = 4;
+  if(servoPosition<90 && servoPosition >= 0){
+    servoPosition += increment;
+    if(servoPosition <0)
+      servoPosition = 0;
+    }
+  else{
+    servoPosition -= increment;
+    if(servoPosiiton>180)
+      servoPosition = 180;
+    }
 }
 else
   servoPosition = 0;
