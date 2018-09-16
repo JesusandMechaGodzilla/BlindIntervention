@@ -2,6 +2,7 @@
 
 void mainsetup(){
   readSetup();
+  motorSetup();
 }
 
 
