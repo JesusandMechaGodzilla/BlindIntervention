@@ -23,7 +23,8 @@ while(true){
   }
   avgArray[59] = reading;
   avgVal += reading;
-  avgVal = avgVal / 240;
+  avgVal = avgVal/60;
+  Serial.println("average");
     Serial.println(avgVal);
 //code here
 reading = analogRead(A1);

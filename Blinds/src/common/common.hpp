@@ -1,6 +1,8 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
-static int avgVal = 0, day = 150, normalTemp = 70,adjSetting = 75;
+
+extern int avgVal;
+static int day = 150, normalTemp = 70,adjSetting = 75;
 static int avgArray[60];
 static bool timeDay = true;
 
