@@ -1,4 +1,5 @@
-#include "read.h"
+#include "read.hpp"
+#include "ChRt.h"
 static THD_WORKING_AREA(wa_read_thread, 256);
 static THD_FUNCTION(read_thread, arg) {
 (void) arg;
@@ -12,6 +13,8 @@ for (int i = 0;i < 60; i++) {
 
 
 while(true){
+  time += MS2ST(1000);
+
   reading = analogRead(A0);
   avgVal = 0;
   for (int i = 0; i < 59; i++) {
@@ -20,7 +23,8 @@ while(true){
   }
   avgArray[59] = reading;
   avgVal += reading;
-  avgVal = avgVal / 60;
+  avgVal = avgVal / 240;
+    Serial.println(avgVal);
 //code here
 reading = analogRead(A1);
 if (reading > day) timeDay = true;

@@ -1,4 +1,7 @@
-#include "main.h"
+#include "main.hpp"
+#include "ChRt.h"
+#include <Arduino.h>
+
 
 void mainsetup(){
   readSetup();
@@ -7,7 +10,9 @@ void mainsetup(){
 
 
 void setup(){
-chBegin(chSetup);
+  Serial.begin(9600);
+chBegin(mainsetup);
+
 
 }
 
